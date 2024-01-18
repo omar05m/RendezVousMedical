@@ -61,10 +61,11 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li class="menu-active"><a href="index.html">Home</a></li>
-                        <li><a href="departments.html">departments</a></li>
-                        <li><a href="about.html">about us</a></li>
-                        <li><a href="contact.html">Contact</a></li>			          				          
+                        <li class="menu-active"><a href="index.jsp">Home</a></li>
+                        <li><a href="departments.jsp">departments</a></li>
+                        <li><a href="about.jsp">about us</a></li>
+                        <li><a href="contact.jsp">Contact</a></li>
+                        <li><a href="login.jsp">Assistance</a></li>			          				          
                     </ul>
                 </nav><!-- #nav-menu-container -->		    		
                 </div>
