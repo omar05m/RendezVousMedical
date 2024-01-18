@@ -378,3 +378,9 @@
 		$('.preloader').fadeOut(500);
     });
 })(jQuery);
+function scrollToAppointment(event) {
+    event.preventDefault();
+    document.getElementById('appointment-form').scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
