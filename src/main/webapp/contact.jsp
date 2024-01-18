@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>Contact Us</title>
+    <title>Contact us</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
@@ -30,60 +29,49 @@
     </div>
     <!-- Preloader End -->
 
-   <!-- Header Area Starts -->
-   <header class="header-area">
-    <div class="header-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 d-md-flex">
-                    <h6 class="mr-3"><span class="mr-2"><i class="fa fa-mobile"></i></span> call us now! +1 305 708 2563</h6>
-                    <h6 class="mr-3"><span class="mr-2"><i class="fa fa-envelope-o"></i></span> medical@example.com</h6>
-                    <h6><span class="mr-2"><i class="fa fa-map-marker"></i></span> Find our Location</h6>
-                </div>
-                <div class="col-lg-3">
-                    <div class="social-links">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                        </ul>
+    <!-- Header Area Starts -->
+    <header class="header-area">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 d-md-flex">
+                        <h6 class="mr-3"><span class="mr-2"><i class="fa fa-mobile"></i></span> Appelez-nous maintenant ! 05 63 15 92 65</h6>
+							<h6 class="mr-3"><span class="mr-2"><i class="fa fa-envelope-o"></i></span>ConsultationFacile@gmail.com</h6>
+							<h6><span class="mr-2"><i class="fa fa-map-marker"></i></span> Trouvez notre emplacement</h6>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="header" id="home">
-        <div class="container">
-            <div class="row align-items-center justify-content-between d-flex">
-            <div id="logo">
-                <a href="index.html"><img src="assets/images/logo/logo.png" alt="" title="" /></a>
-            </div>
-            <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li class="menu-active"><a href="index.html">Home</a></li>
-                    <li><a href="departments.html">departments</a></li>
-                    <li><a href="doctors.html">doctors</a></li>
-                    <li class="menu-has-children"><a href="">Pages</a>
-                        <ul>
-                            <li><a href="about.html">about us</a></li>
-                            <li><a href="elements.html">elements</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-has-children"><a href="">blog</a>
-                        <ul>
-                            <li><a href="blog-home.html">blog home</a></li>
-                            <li><a href="blog-details.html">blog details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>			          				          
-                </ul>
-            </nav><!-- #nav-menu-container -->		    		
+        <div id="header" id="home">
+            <div class="container">
+                <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="" title="" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-active"><a href="index.jsp">Home</a></li>
+                        <li><a href="departments.jsp">departments</a></li>
+                        <li><a href="about.jsp">about us</a></li>
+                        <li><a href="contact.jsp">Contact</a></li>
+                        <li><a href="login.jsp">Assistance</a></li>			          				          
+                    </ul>
+                </nav><!-- #nav-menu-container -->		    		
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 <!-- Header Area End -->
 
 <!-- Banner Area Starts -->
@@ -92,7 +80,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Contact Us</h1>
-                <a href="index.html">Home</a> <span>|</span> <a href="contact.html">Contact Us</a>
+                <a href="index.jsp">Home</a> <span>|</span> <a href="contact.jsp">Contact Us</a>
             </div>
         </div>
     </div>
@@ -120,125 +108,155 @@
 
 
     <!-- Contact Form Starts -->
-    <section class="contact-form section-padding3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 mb-5 mb-lg-0">
-                    <div class="d-flex">
-                        <div class="into-icon">
-                            <i class="fa fa-home"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3>California, United States</h3>
-                            <p>Santa monica bullevard</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="into-icon">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3>00 (440) 9865 562</h3>
-                            <p>Mon to Fri 9am to 6 pm</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="into-icon">
-                            <i class="fa fa-envelope-o"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3>support@colorlib.com</h3>
-                            <p>Send us your query anytime!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <form action="#">
-                        <div class="left">
-                            <input type="text" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" required>
-                            <input type="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" required>
-                            <input type="text" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" required>
-                        </div>
-                        <div class="right">
-                            <textarea name="message" cols="20" rows="7"  placeholder="Enter Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" required></textarea>
-                        </div>
-                        <button type="submit" class="template-btn">subscribe now</button>
-                    </form>
+    <section class="banner-area other-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Nous Contacter</h1>
+                <a href="index.html">Accueil</a> <span>|</span> <a href="contact.html">Contactez-nous</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Banner Area End -->
+
+<!-- Map Area Starts -->
+<section class="map-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="mapBox" class="mapBox" 
+                    data-lat="46.6031" 
+                    data-lon="1.8883" 
+                    data-zoom="6" 
+                    data-info="France."
+                    data-mlat="46.6031"
+                    data-mlon="1.8883">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- Map Area End -->
+
+<!-- Formulaire de Contact -->
+<section class="contact-form section-padding3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 mb-5 mb-lg-0">
+                <div class="d-flex">
+                    <div class="into-icon">
+                        <i class="fa fa-home"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>France</h3>
+                        <p>Boulevard Saint-Michel, Paris</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="into-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>00 (212) 6 23 45 67 89</h3>
+                        <p>Lun à Ven 9h à 18h</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="into-icon">
+                        <i class="fa fa-envelope-o"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>consultationfacile@gmail.com</h3>
+                        <p>Envoyez-nous votre demande à tout moment !</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <form action="#">
+                    <div class="left">
+                        <input type="text" placeholder="Entrez votre nom" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrez votre nom'" required>
+                        <input type="email" placeholder="Entrez votre adresse e-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrez votre adresse e-mail'" required>
+                        <input type="text" placeholder="Entrez le sujet" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrez le sujet'" required>
+                    </div>
+                    <div class="right">
+                        <textarea name="message" cols="20" rows="7"  placeholder="Entrez votre message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrez votre message'" required></textarea>
+                    </div>
+                    <button type="submit" class="template-btn">Envoyer maintenant</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Contact Form End -->
 
 
     <!-- Footer Area Starts -->
-    <footer class="footer-area section-padding">
-        <div class="footer-widget">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-2 col-lg-3">
-                        <div class="single-widget-home mb-5 mb-lg-0">
-                            <h3 class="mb-4">top products</h3>
-                            <ul>
-                                <li class="mb-2"><a href="#">managed website</a></li>
-                                <li class="mb-2"><a href="#">managed reputation</a></li>
-                                <li class="mb-2"><a href="#">power tools</a></li>
-                                <li><a href="#">marketing service</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 offset-xl-1 col-lg-6">
-                        <div class="single-widget-home mb-5 mb-lg-0">
-                            <h3 class="mb-4">newsletter</h3>
-                            <p class="mb-4">You can trust us. we only send promo offers, not a single.</p>  
-                            <form action="#">
-                                <input type="email" placeholder="Your email here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email here'" required>
-                                <button type="submit" class="template-btn">subscribe now</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 offset-xl-1 col-lg-3">
-                        <div class="single-widge-home">
-                            <h3 class="mb-4">instagram feed</h3>
-                            <div class="feed">
-                                <img src="assets/images/feed1.jpg" alt="feed">
-                                <img src="assets/images/feed2.jpg" alt="feed">
-                                <img src="assets/images/feed3.jpg" alt="feed">
-                                <img src="assets/images/feed4.jpg" alt="feed">
-                                <img src="assets/images/feed5.jpg" alt="feed">
-                                <img src="assets/images/feed6.jpg" alt="feed">
-                                <img src="assets/images/feed7.jpg" alt="feed">
-                                <img src="assets/images/feed8.jpg" alt="feed">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-6">
-                        <span>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</span>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="social-icons">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+   <footer class="footer-area section-padding">
+			<div class="footer-widget">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-2 col-lg-3">
+							<div class="single-widget-home mb-5 mb-lg-0">
+								<h3 class="mb-4">top products</h3>
+								<ul>
+									<li class="mb-2"><a href="#">Site web géré</a></li>
+									<li class="mb-2"><a href="#">Réputation gérée</a></li>
+									<li class="mb-2"><a href="#">Outils performants</a></li>
+									<li><a href="#">Service de marketing</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-xl-5 offset-xl-1 col-lg-6">
+							<div class="single-widget-home mb-5 mb-lg-0">
+								<h3 class="mb-4">Newsletter</h3>
+								<p class="mb-4">Vous pouvez nous faire confiance. Nous envoyons uniquement des offres
+									promotionnelles, rien d'autre.</p>
+								<form action="#">
+									<input type="email" placeholder="Votre email ici" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Votre email ici'" required>
+									<button type="submit" class="template-btn">abonner </button>
+								</form>
+							</div>
+						</div>
+						<div class="col-xl-3 offset-xl-1 col-lg-3">
+							<div class="single-widge-home">
+								<h3 class="mb-4">Instagram</h3>
+								<div class="feed">
+									<img src="assets/images/feed1.jpg" alt="feed"> <img src="assets/images/feed2.jpg"
+										alt="feed"> <img src="assets/images/feed3.jpg" alt="feed"> <img
+										src="assets/images/feed4.jpg" alt="feed"> <img src="assets/images/feed5.jpg"
+										alt="feed"> <img src="assets/images/feed6.jpg" alt="feed"> <img
+										src="assets/images/feed7.jpg" alt="feed"> <img src="assets/images/feed8.jpg"
+										alt="feed">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-lg-8 col-md-6">
+
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="social-icons">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+									<li><a href="#"><i class="fa fa-behance"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
     <!-- Footer Area End -->
 
 
