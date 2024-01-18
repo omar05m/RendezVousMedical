@@ -5,7 +5,7 @@ html {
   font-size: 14px;
   letter-spacing: 1px;
   position: relative;
-  background: url('/medino-master/assets/images/bgLog.webp') center center ;
+  background: url(bgLog.webp) center center;
  
 }
 html::before {
@@ -14,8 +14,8 @@ html::before {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(38, 131, 224, 0.174); 
+    bottom: -10px; 
+    background: rgba(0, 0, 0, 0.645); 
 }
 .login {
   position: relative;
@@ -29,7 +29,7 @@ html::before {
 
 
 form{
-    background-color: #ffffffb9;
+    background-color: #ffffffed;
     padding-top: 10%;
     border-radius: 3%;
     box-shadow: 30%;
