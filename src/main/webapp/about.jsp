@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>About</title>
+    <title>About us</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
@@ -36,9 +35,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 d-md-flex">
-                        <h6 class="mr-3"><span class="mr-2"><i class="fa fa-mobile"></i></span> call us now! +1 305 708 2563</h6>
-                        <h6 class="mr-3"><span class="mr-2"><i class="fa fa-envelope-o"></i></span> medical@example.com</h6>
-                        <h6><span class="mr-2"><i class="fa fa-map-marker"></i></span> Find our Location</h6>
+                        <h6 class="mr-3"><span class="mr-2"><i class="fa fa-mobile"></i></span> Appelez-nous maintenant ! 05 63 15 92 65</h6>
+							<h6 class="mr-3"><span class="mr-2"><i class="fa fa-envelope-o"></i></span>ConsultationFacile@gmail.com</h6>
+							<h6><span class="mr-2"><i class="fa fa-map-marker"></i></span> Trouvez notre emplacement</h6>
                     </div>
                     <div class="col-lg-3">
                         <div class="social-links">
@@ -62,22 +61,11 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li class="menu-active"><a href="index.html">Home</a></li>
-                        <li><a href="departments.html">departments</a></li>
-                        <li><a href="doctors.html">doctors</a></li>
-                        <li class="menu-has-children"><a href="">Pages</a>
-                            <ul>
-                                <li><a href="about.html">about us</a></li>
-                                <li><a href="elements.html">elements</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-has-children"><a href="">blog</a>
-                            <ul>
-                                <li><a href="blog-home.html">blog home</a></li>
-                                <li><a href="blog-details.html">blog details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>			          				          
+                        <li class="menu-active"><a href="index.jsp">Home</a></li>
+                        <li><a href="departments.jsp">departments</a></li>
+                        <li><a href="about.jsp">about us</a></li>
+                        <li><a href="contact.jsp">Contact</a></li>
+                        <li><a href="login.jsp">Assistance</a></li>			          				          
                     </ul>
                 </nav><!-- #nav-menu-container -->		    		
                 </div>
@@ -100,7 +88,7 @@
     <!-- Banner Area End -->
 
     <!-- Welcome Area Starts -->
-    <section class="welcome-area section-padding">
+    <section class="welcome-area section-padding3">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 align-self-center">
@@ -110,10 +98,12 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="welcome-text mt-5 mt-lg-0">
-                        <h2>Welcome to our clinic</h2>
-                        <p class="pt-3">Subdue whales void god which living don't midst lesser yielding over lights whose. Cattle greater brought sixth fly den dry good tree isn't seed stars were.</p>
-                        <p>Subdue whales void god which living don't midst lesser yielding over lights whose. Cattle greater brought sixth fly den dry good tree isn't seed stars were the boring.</p>
-                        <a href="#" class="template-btn mt-3">learn more</a>
+                        <h2>Bienvenue dans votre clinique</h2>
+                        <p class="pt-3">Découvrez une clinique moderne et chaleureuse, alliant qualité des soins et
+                            technologies avancées. Notre équipe dévouée vous assure une expérience personnalisée,
+                            garantissant votre bien-être. Dotée des dernières avancées médicales, notre clinique
+                            offre un environnement accueillant où chaque visite promet des soins exceptionnels</p>
+                        <p>Bienvenue dans un lieu dédié à votre santé, où l'excellence rencontre la compassion.</p>
                     </div>
                 </div>
             </div>
@@ -122,48 +112,57 @@
     <!-- Welcome Area End -->
 
     <!-- Patient Area Starts -->
-    <section class="patient-area section-padding3">
+     <section class="patient-area section-padding appointment-area section-padding" id="appointment-form">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-top text-center">
-                        <h2>Patient are saying</h2>
-                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
+                        <h2>témoignages</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-5">
                     <div class="single-patient mb-4">
-                        <img src="assets/images/patient1.png" alt="">
-                        <h3>daren jhonson</h3>
-                        <h5>hp specialist</h5>
-                        <p class="pt-3">Elementum libero hac leo integer. Risus hac road parturient feugiat. Litora cursus hendrerit bib elit Tempus inceptos posuere metus.</p>
-                    </div>
-                    <div class="single-patient">
-                        <img src="assets/images/patient2.png" alt="">
-                        <h3>black heiden</h3>
-                        <h5>hp specialist</h5>
-                        <p class="pt-3">Elementum libero hac leo integer. Risus hac road parturient feugiat. Litora cursus hendrerit bib elit Tempus inceptos posuere metus.</p>
-                    </div>
+							<img src="assets/images/patient1.png" alt="">
+							<h3> Marie Dubois</h3>
+							<h5>patiente </h5>
+							<p class="pt-3">Un service exceptionnel ! Le personnel attentionné et les installations
+								modernes ont rendu ma visite à la clinique mémorable. Des soins de qualité et une équipe
+								professionnelle."</p>
+						</div>
+						<div class="single-patient">
+							<img src="assets/images/patient2.png" alt="">
+							<h3>Dr. Nicolas Dupont </h3>
+							<h5>Cardiologue</h5>
+							<p class="pt-3">Une chirurgie plastique impeccable ! Le personnel compétent et les résultats
+								extraordinaires ont transformé ma vie. La clinique offre une expertise exceptionnelle et
+								un suivi attentionné.</p>
+						</div>
                 </div>
                 <div class="col-lg-5 offset-lg-1 align-self-center">
                     <div class="appointment-form text-center mt-5 mt-lg-0">
-                        <h3 class="mb-5">appointment now</h3>
+                        <h3 class="mb-5">Réserver votre rendez-vous</h3>
                         <form action="#">
-                            <div class="form-group">
-                                <input type="text" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" required>
+                            <div class="mt-10">
+                                <input type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required class="single-input">
                             </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Your Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email'" required> 
+                            <div class="mt-10">
+                                <input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
                             </div>
-                            <div class="form-group">
-                                <input type="text" id="datepicker" placeholder="Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date'" required>
+                            <div class="mt-10">
+                                <input type="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required class="single-input">
                             </div>
-                            <div class="form-group">
-                                <textarea name="message" cols="20" rows="7"  placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
+                            <div class="mt-10">
+                                <input type="text" name="phone" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'" required class="single-input">
                             </div>
-                            <a href="#" class="template-btn">appointment now</a>
+                            <div class="mt-10">
+                                <input type="date" name="date" placeholder="Appointment Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Appointment Date'" required class="single-input">
+                            </div>
+                            <div class="mt-10">
+                                <textarea class="single-textarea" name="message" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
+                            </div>
+                            <button type="submit" class="template-btn mt-10">Rendez-vous maintenant</button>
                         </form>
                     </div>
                 </div>
@@ -174,72 +173,69 @@
     
     <!-- Footer Area Starts -->
     <footer class="footer-area section-padding">
-        <div class="footer-widget">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-2 col-lg-3">
-                        <div class="single-widget-home mb-5 mb-lg-0">
-                            <h3 class="mb-4">top products</h3>
-                            <ul>
-                                <li class="mb-2"><a href="#">managed website</a></li>
-                                <li class="mb-2"><a href="#">managed reputation</a></li>
-                                <li class="mb-2"><a href="#">power tools</a></li>
-                                <li><a href="#">marketing service</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 offset-xl-1 col-lg-6">
-                        <div class="single-widget-home mb-5 mb-lg-0">
-                            <h3 class="mb-4">newsletter</h3>
-                            <p class="mb-4">You can trust us. we only send promo offers, not a single.</p>  
-                            <form action="#">
-                                <input type="email" placeholder="Your email here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email here'" required>
-                                <button type="submit" class="template-btn">subscribe now</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 offset-xl-1 col-lg-3">
-                        <div class="single-widge-home">
-                            <h3 class="mb-4">instagram feed</h3>
-                            <div class="feed">
-                                <img src="assets/images/feed1.jpg" alt="feed">
-                                <img src="assets/images/feed2.jpg" alt="feed">
-                                <img src="assets/images/feed3.jpg" alt="feed">
-                                <img src="assets/images/feed4.jpg" alt="feed">
-                                <img src="assets/images/feed5.jpg" alt="feed">
-                                <img src="assets/images/feed6.jpg" alt="feed">
-                                <img src="assets/images/feed7.jpg" alt="feed">
-                                <img src="assets/images/feed8.jpg" alt="feed">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-6">
-                        <span>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</span>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="social-icons">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+			<div class="footer-widget">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-2 col-lg-3">
+							<div class="single-widget-home mb-5 mb-lg-0">
+								<h3 class="mb-4">top products</h3>
+								<ul>
+									<li class="mb-2"><a href="#">Site web géré</a></li>
+									<li class="mb-2"><a href="#">Réputation gérée</a></li>
+									<li class="mb-2"><a href="#">Outils performants</a></li>
+									<li><a href="#">Service de marketing</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-xl-5 offset-xl-1 col-lg-6">
+							<div class="single-widget-home mb-5 mb-lg-0">
+								<h3 class="mb-4">Newsletter</h3>
+								<p class="mb-4">Vous pouvez nous faire confiance. Nous envoyons uniquement des offres
+									promotionnelles, rien d'autre.</p>
+								<form action="#">
+									<input type="email" placeholder="Votre email ici" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Votre email ici'" required>
+									<button type="submit" class="template-btn">abonner </button>
+								</form>
+							</div>
+						</div>
+						<div class="col-xl-3 offset-xl-1 col-lg-3">
+							<div class="single-widge-home">
+								<h3 class="mb-4">Instagram</h3>
+								<div class="feed">
+									<img src="assets/images/feed1.jpg" alt="feed"> <img src="assets/images/feed2.jpg"
+										alt="feed"> <img src="assets/images/feed3.jpg" alt="feed"> <img
+										src="assets/images/feed4.jpg" alt="feed"> <img src="assets/images/feed5.jpg"
+										alt="feed"> <img src="assets/images/feed6.jpg" alt="feed"> <img
+										src="assets/images/feed7.jpg" alt="feed"> <img src="assets/images/feed8.jpg"
+										alt="feed">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-lg-8 col-md-6">
+
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="social-icons">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+									<li><a href="#"><i class="fa fa-behance"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
     <!-- Footer Area End -->
 
 

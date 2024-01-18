@@ -9,6 +9,7 @@ public class RendezVousDao {
 	   
 	
 	public static boolean isTimeSlotReserved(String day, String time) {
+
 	        String query = "SELECT COUNT(*) FROM rendezvous WHERE Date_RendezVous = ? AND Heure_RendezVous = ?";
 
 	        try (Connection conn = connectionDB.getConnection();
