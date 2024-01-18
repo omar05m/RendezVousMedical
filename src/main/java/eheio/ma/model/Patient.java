@@ -6,17 +6,19 @@ public class Patient {
 	private String nom;
 	private String prenom;
 	private String email;
+	private String password;
 	private Date dateNaissance;
 	private String telephone;
-	private String typeConsoltation;
-	public Patient(String nom, String prenom, String email, Date dateNaissance, String telephone,
-			String typeConsoltation) {
+	private String message;
+	public Patient(String nom, String prenom, String email,String password, Date dateNaissance, String telephone,
+			String message) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
+		this.password = password;
 		this.dateNaissance = dateNaissance;
 		this.telephone = telephone;
-		this.typeConsoltation = typeConsoltation;
+		this.message = message;
 	}
 	public String getNom() {
 		return nom;
@@ -29,6 +31,12 @@ public class Patient {
 	}
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getEmail() {
 		return email;
@@ -48,11 +56,11 @@ public class Patient {
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
-	public String getTypeConsoltation() {
-		return typeConsoltation;
+	public String getMessage() {
+		return message;
 	}
-	public void setTypeConsoltation(String typeConsoltation) {
-		this.typeConsoltation = typeConsoltation;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 	
 	
