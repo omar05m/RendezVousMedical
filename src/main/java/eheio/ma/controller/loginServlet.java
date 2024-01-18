@@ -31,8 +31,9 @@ public class loginServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		Assistante assist = new Assistante(request.getParameter("username"),request.getParameter("password"));
+		String login = request.getParameter("username");
+		String psswd = request.getParameter("password");
+		Assistante assist = new Assistante(login,psswd);
 		if(assist.verify()) {
 			response.sendRedirect("salam.jsp");
 		}
