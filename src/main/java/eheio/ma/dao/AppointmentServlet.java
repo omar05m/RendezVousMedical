@@ -14,7 +14,12 @@ import java.util.List;
 
 @WebServlet("/appointmentList")
 public class AppointmentServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Appointment> appointments = new ArrayList<>();
         Connection conn = null;
         Statement stmt = null;
@@ -27,16 +32,17 @@ public class AppointmentServlet extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(url, user, password);
             stmt = conn.createStatement();
-            String sql = "SELECT * FROM appointments"; // Update with your SQL query
+            String sql = "SELECT * FROM patient"; // Update with your SQL query
             rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
-                String firstName = rs.getString("first_name");
-                String lastName = rs.getString("last_name");
-                String email = rs.getString("email");
-                String phone = rs.getString("phone");
-                String dateRdv = rs.getString("date_rdv");
-                String message = rs.getString("message");
+                String firstName = rs.getString("Nom");
+                String lastName = rs.getString("Prenom");
+                String email = rs.getString("Email");
+                String phone = rs.getString("Numero_de_Telephone");
+                String message = rs.getString("Message");
+                String dateRdv = rs.getString("Date_rdv");
+
                 appointments.add(new Appointment(firstName, lastName, email, phone, dateRdv, message));
             }
         } catch (Exception e) {
