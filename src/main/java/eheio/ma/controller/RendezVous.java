@@ -49,7 +49,7 @@ public class RendezVous extends HttpServlet {
 
 		try {
 			Date date = formatter.parse(date_nassaice);
-			Patient patient = new Patient(nom,prenom,email,uniqueCode,date,phone,type_consult);
+			Patient patient = new Patient(nom,prenom,email,uniqueCode,phone,date,type_consult);
 			boolean isSaved = patientDao.insertPatient(patient);
 			if(isSaved) {
 				HttpSession session = request.getSession();
@@ -62,4 +62,5 @@ public class RendezVous extends HttpServlet {
 		}
 	
 
+}
 }

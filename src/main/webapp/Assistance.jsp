@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
 <%@ page import="eheio.ma.dao.*" %>
+<%@ page import="eheio.ma.model.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,27 +77,36 @@
             </div>
         </div>
     </header>
-    <table border="1">
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Date of Appointment</th>
-            <th>Message</th>
-        </tr>
-       <%
-    List<Appointment> appointments = (List<Appointment>) request.getAttribute("appointments");
-    if(appointments != null) {
-        for (Appointment appointment : appointments) {
-            out.println("<tr><td>" + appointment.getFirstName() + "</td><td>" + appointment.getLastName() + "</td><td>" + appointment.getEmail() + "</td><td>" + appointment.getPhone() + "</td><td>" + appointment.getDateRdv() + "</td><td>" + appointment.getMessage() + "</td></tr>");
+<table border="1">
+    <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Email</th>
+        <th>Telephone</th>
+        <th>Date de Naissance</th>
+        <th>Type de Consultation</th>
+        <th>Action</th>
+    </tr>
+<%
+    PatientDao patientDao = new PatientDao();
+    List<Patient> patients = patientDao.getAllPatients();
+    if (patients != null) {
+        for (Patient patient : patients) {
+            out.println("<tr><td>" + patient.getNom() + "</td><td>" + patient.getPrenom() + "</td><td>" + patient.getEmail() + "</td><td>" + patient.getTelephone() + "</td><td>" + patient.getDateNaissance() + "</td><td>" + patient.getMessage() + "</td>");
+            %>
+            <td>
+                <button onclick="confirmAppointment">Valider</button>
+                <button onclick="rejectAppointment">Refuser</button>
+            </td>
+            </tr>
+<%
+            out.println("</tr>");
         }
     } else {
-        out.println("<tr><td colspan='6'>Aucun rendez-vous disponible.</td></tr>");
+        out.println("<tr><td colspan='6'>Aucun patient disponible.</td></tr>");
     }
 %>
-
-    </table>
+</table>
 
     <script>
         function confirmAppointment(appointmentId) {

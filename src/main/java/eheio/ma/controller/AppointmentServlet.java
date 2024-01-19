@@ -1,16 +1,21 @@
-package eheio.ma.dao;
+package eheio.ma.controller;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jakarta.servlet.annotation.WebServlet;
-
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import eheio.ma.dao.connectionDB;
+import eheio.ma.model.Appointment;
 
 
 public class AppointmentServlet extends HttpServlet {
@@ -26,11 +31,7 @@ public class AppointmentServlet extends HttpServlet {
         ResultSet rs = null;
 
         try {
-            String url = "jdbc:mysql://localhost:3306/gestiondb"; // Update with your database URL
-            String user = "root"; // Update with your database username
-            String password = ""; // Update with your database password
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(url, user, password);
+            conn = connectionDB.getConnection();
             stmt = conn.createStatement();
             String sql = "SELECT * FROM patient"; // Update with your SQL query
             rs = stmt.executeQuery(sql);
@@ -48,9 +49,7 @@ public class AppointmentServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            if (rs != null) try { rs.close(); } catch (SQLException e) {}
-            if (stmt != null) try { stmt.close(); } catch (SQLException e) {}
-            if (conn != null) try { conn.close(); } catch (SQLException e) {}
+          connectionDB.closeConnection();
         }
 
         request.setAttribute("appointments", appointments);

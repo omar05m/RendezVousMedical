@@ -9,9 +9,9 @@ public class Patient {
 	private String password;
 	private Date dateNaissance;
 	private String telephone;
-	private String typeConsoltation;
-	public Patient(String nom, String prenom, String email,String password ,Date dateNaissance, String telephone,
-			String typeConsoltation) {
+	private String message;
+	public Patient(String nom, String prenom, String email,String password ,String telephone,Date dateNaissance, 
+			String message) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;

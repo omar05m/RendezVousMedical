@@ -1,4 +1,4 @@
-package eheio.ma.dao;
+package eheio.ma.model;
 
 
 	public class Appointment {
