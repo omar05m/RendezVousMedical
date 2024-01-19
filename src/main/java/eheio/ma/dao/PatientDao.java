@@ -19,14 +19,15 @@ public class PatientDao {
 	        
 	        try {
 	            connection = connectionDB.getConnection();
-	            String sql = "INSERT INTO patient (nom, prenom, email, date_naissance, telephone, type_consultation) VALUES (?, ?, ?, ?, ?, ?)";
+	            String sql = "INSERT INTO `patient` (`Nom`, `Prenom`, `Email`, `Password`, `Numero_de_Telephone`, `Date_de_Naissance`, `Message`) VALUES (?, ?, ?, ?, ?, ?, ?)";
 	            preparedStatement = connection.prepareStatement(sql);
 	            preparedStatement.setString(1, patient.getNom());
 	            preparedStatement.setString(2, patient.getPrenom());
 	            preparedStatement.setString(3, patient.getEmail());
-	            preparedStatement.setDate(4, new java.sql.Date(patient.getDateNaissance().getTime()));
+	            preparedStatement.setString(4, patient.getPassword());
 	            preparedStatement.setString(5, patient.getTelephone());
-	            preparedStatement.setString(6, patient.getTypeConsoltation());
+	            preparedStatement.setDate(6, new java.sql.Date(patient.getDateNaissance().getTime()));
+	            preparedStatement.setString(7, patient.getMessage());
 
 	            int rowsAffected = preparedStatement.executeUpdate();
 	            return rowsAffected > 0;
