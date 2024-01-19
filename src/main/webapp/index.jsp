@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="eheio.ma.dao.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +22,8 @@
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/linearicons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styleCal.css">
+    
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -62,7 +65,7 @@
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class="menu-active"><a href="index.jsp">Home</a></li>
-                        <li><a href="departments.jsp">departments</a></li>
+                        <li><a href="departements.jsp">departments</a></li>
                         <li><a href="about.jsp">about us</a></li>
                         <li><a href="contact.jsp">Contact</a></li>
                         <li><a href="login.jsp">Assistance</a></li>			          				          
@@ -229,7 +232,7 @@
 
     <!-- Patient Area Starts -->
     <section class="patient-area section-padding appointment-area section-padding" id="appointment-form">
-        <div class="container">
+       
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-top text-center">
@@ -239,27 +242,51 @@
             </div>
             <div class="row">
                 <div class="col-lg-5">
-                    <div class="single-patient mb-4">
-							<img src="assets/images/patient1.png" alt="">
-							<h3> Marie Dubois</h3>
-							<h5>patiente </h5>
-							<p class="pt-3">Un service exceptionnel ! Le personnel attentionné et les installations
-								modernes ont rendu ma visite à la clinique mémorable. Des soins de qualité et une équipe
-								professionnelle."</p>
-						</div>
-						<div class="single-patient">
-							<img src="assets/images/patient2.png" alt="">
-							<h3>Dr. Nicolas Dupont </h3>
-							<h5>Cardiologue</h5>
-							<p class="pt-3">Une chirurgie plastique impeccable ! Le personnel compétent et les résultats
-								extraordinaires ont transformé ma vie. La clinique offre une expertise exceptionnelle et
-								un suivi attentionné.</p>
+                    <div class="table mb-4">
+							<div class="calendar-container">
+        <table class="calendar">
+            <!-- Table headers for days and time slots -->
+            <tr>
+                <th>Time/Day</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+            </tr>
+
+            <!-- Time slots -->
+            <% 
+            for(int hour = 9; hour < 17; hour++) {
+                String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri"};
+                for(int part = 0; part < 2; part++) {
+                    String time = hour + (part == 0 ? ":00" : ":30");
+            %>
+            <tr>
+                <td><%= time %></td> <!-- Display time -->
+                <% 
+                for(String day : days) {
+                    boolean isReserved = RendezVousDao.isTimeSlotReserved(day, time);
+                %>
+                    <td class="<%= isReserved ? "reserved" : "available" %>" onClick="<%= isReserved ? "" : "bookTimeSlot('" + day + "', '" + time + "')" %>">
+                        <%= isReserved ? "Ne pas disponible" : "Disponible" %>
+                    </td>
+                <% 
+                }
+                %>
+            </tr>
+            <% 
+                }
+            } 
+            %>
+        </table>
+    </div>
 						</div>
                 </div>
                 <div class="col-lg-5 offset-lg-1 align-self-center">
                     <div class="appointment-form text-center mt-5 mt-lg-0">
                         <h3 class="mb-5">Réserver votre rendez-vous</h3>
-                        <form action="#">
+                        <form action="RendezVous" method="post">
                             <div class="mt-10">
                                 <input type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required class="single-input">
                             </div>
@@ -273,7 +300,7 @@
                                 <input type="text" name="phone" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'" required class="single-input">
                             </div>
                             <div class="mt-10">
-                                <input type="date" name="date" placeholder="Appointment Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Appointment Date'" required class="single-input">
+                                <input type="datetime-local" name="date_rdv" placeholder="Appointment Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Appointment Date'" required class="single-input">
                             </div>
                             <div class="mt-10">
                                 <textarea class="single-textarea" name="message" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
@@ -283,7 +310,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
     </section>
     <!-- Patient Area Starts -->
 
