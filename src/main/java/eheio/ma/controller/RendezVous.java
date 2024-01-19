@@ -56,4 +56,7 @@ public class RendezVous extends HttpServlet {
 	public void setIdRendezVous(int int1) {
 	}
 
+	public void setIdRendezVous(int int1) {		
+	}
+
 }

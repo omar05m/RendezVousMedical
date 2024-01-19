@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>eheio.ma.controller.RendezVous</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AppointmentServlet</servlet-name>
+  	<display-name>AppointmentServlet</display-name>
+  	<description></description>
+  	<servlet-class>eheio.ma.dao.AppointmentServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>RendezVous</servlet-name>
   	<url-pattern>/RendezVous</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AppointmentServlet</servlet-name>
+  	<url-pattern>/AppointmentServlet</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -1,0 +1,129 @@
+@charset "ISO-8859-1";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.calendar-container {
+    margin: 20px;
+    overflow-x: auto;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Adjust as needed */
+}
+
+.calendar th, .calendar td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.calendar th {
+    background-color: #38a4ff;
+    color: white;
+}
+
+.calendar td {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.calendar-container {
+    margin: 20px;
+    overflow-x: auto;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.calendar th, .calendar td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.calendar th {
+    background-color: #38a4ff;
+    color: white;
+}
+
+.calendar td {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Hover effect for table cells */
+.calendar td:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .calendar-container {
+        margin: 10px;
+    }
+
+    .calendar {
+        min-width: 0; /* Allows the table to adjust to screen size */
+    }
+.table{
+	width: 70% !important;
+}
+    .calendar th, .calendar td {
+        padding: 4px; /* Smaller padding for smaller screens */
+        font-size: 12px; /* Smaller font size for readability */
+    }
+}
+
+/* Additional Styling for Form Elements (if any) */
+input[type="date"], input[type="time"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #38a4ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #38a4ff;
+}
+
+.reserved {
+    background-color: red;
+    color: white;
+    cursor: not-allowed;
+}
+
+.available {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
