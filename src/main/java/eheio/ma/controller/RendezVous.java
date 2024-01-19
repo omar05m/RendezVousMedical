@@ -21,4 +21,7 @@ public class RendezVous extends HttpServlet {
 		doGet(request, response);
 	}
 
+	public void setIdRendezVous(int int1) {		
+	}
+
 }
