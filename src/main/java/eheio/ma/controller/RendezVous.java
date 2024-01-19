@@ -1,68 +1,65 @@
 package eheio.ma.controller;
 
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.UUID;
+
+import eheio.ma.dao.PatientDao;
+import eheio.ma.model.Patient;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import jakarta.servlet.http.HttpSession;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import eheio.ma.dao.connectionDB;
+
 
 
 public class RendezVous extends HttpServlet {
     private static final long serialVersionUID = 1L;
+    public PatientDao patientDao = new PatientDao();
 
     public RendezVous() {
         super();
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("index.jsp");
-    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.getRequestDispatcher("index.jsp").forward(request, response);
+	}
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Retrieve form data
-        String firstName = request.getParameter("first_name");
-        String lastName = request.getParameter("last_name");
-        String email = request.getParameter("email");
-        String phone = request.getParameter("phone");
-        String dateRdv = request.getParameter("date_rdv");
-        String message = request.getParameter("message");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String nom = request.getParameter("first_name");
+		String prenom = request.getParameter("last_name");
+		String email = request.getParameter("email");
+		String phone = request.getParameter("phone");
+		String type_consult = request.getParameter("message");
+		String uniqueCode = UUID.randomUUID().toString();
+		String date_nassaice = request.getParameter("date_rdv");
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd"); // Define the pattern matching your date string
 
-        // Assuming you have a method to get the DB connection
-        Connection conn = connectionDB.getConnection();
+		try {
+			Date date = formatter.parse(date_nassaice);
+			Patient patient = new Patient(nom,prenom,email,uniqueCode,date,phone,type_consult);
+			boolean isSaved = patientDao.insertPatient(patient);
+			if(isSaved) {
+				HttpSession session = request.getSession();
+				session.setAttribute("uniqueCode", uniqueCode);
+				request.getRequestDispatcher("salam.jsp").forward(request, response);
+			}
 
-        if (conn != null) {
-            try {
-                // Prepare SQL statement to insert the appointment
-                String sql = "INSERT INTO patient (Nom, Prenom, Email, Numero_de_Telephone,Message, Date_de_rdv) VALUES (?, ?, ?, ?, ?, ?)";
-                try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-                    stmt.setString(1, firstName);
-                    stmt.setString(2, lastName);
-                    stmt.setString(3, email);
-                    stmt.setString(4, phone);
-                    stmt.setString(5, dateRdv);
-                    stmt.setString(6, message);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+	
 
-                    // Execute the statement
-                    stmt.executeUpdate();
-                }
-            } catch (SQLException e) {
-                e.printStackTrace(); // Replace with better error handling
-            } finally {
-                try {
-                    conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace(); // Replace with better error handling
-                }
-            }
-        }
-
-        // Redirect to a success page or back to the calendar
-        response.sendRedirect("appointment-success.jsp"); // Redirect to a success page
-    }
 }
