@@ -12,7 +12,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/appointmentList")
+
 public class AppointmentServlet extends HttpServlet {
     /**
 	 * 

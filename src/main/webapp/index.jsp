@@ -241,11 +241,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-5">
-                    <div class="table mb-4">
+                <div class="col-lg-5 offset-lg-1 align-self-center">
+                    <div class="table ">
 							<div class="calendar-container">
         <table class="calendar">
-            <!-- Table headers for days and time slots -->
             <tr>
                 <th>Time/Day</th>
                 <th>Mon</th>
@@ -254,8 +253,6 @@
                 <th>Thu</th>
                 <th>Fri</th>
             </tr>
-
-            <!-- Time slots -->
             <% 
             for(int hour = 9; hour < 17; hour++) {
                 String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri"};
@@ -263,14 +260,16 @@
                     String time = hour + (part == 0 ? ":00" : ":30");
             %>
             <tr>
-                <td><%= time %></td> <!-- Display time -->
+                <td><%= time %></td>
                 <% 
                 for(String day : days) {
+                    String datetime = "2024-01-19T" + time; // Modify as per your requirements
                     boolean isReserved = RendezVousDao.isTimeSlotReserved(day, time);
                 %>
-                    <td class="<%= isReserved ? "reserved" : "available" %>" onClick="<%= isReserved ? "" : "bookTimeSlot('" + day + "', '" + time + "')" %>">
-                        <%= isReserved ? "Ne pas disponible" : "Disponible" %>
-                    </td>
+                <td class="<%= isReserved ? "reserved" : "available" %>"
+                    onClick="<%= isReserved ? "" : "populateForm('" + datetime + "')" %>">
+                    <%= isReserved ? "Ne pas disponible" : "Disponible" %>
+                </td>
                 <% 
                 }
                 %>
@@ -300,7 +299,7 @@
                                 <input type="text" name="phone" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'" required class="single-input">
                             </div>
                             <div class="mt-10">
-                                <input type="datetime-local" name="date_rdv" placeholder="Appointment Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Appointment Date'" required class="single-input">
+                             <input type="datetime-local" id="date_rdv" name="date_rdv" required class="single-input">
                             </div>
                             <div class="mt-10">
                                 <textarea class="single-textarea" name="message" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
@@ -597,6 +596,12 @@
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/vendor/superfish.min.js"></script>
     <script src="assets/js/main.js"></script>
-
+	 
+    <script>
+        function populateForm(datetime) {
+            document.getElementById("date_rdv").value = datetime;
+        }
+    </script>
+    
 </body>
 </html>

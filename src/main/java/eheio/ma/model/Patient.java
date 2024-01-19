@@ -9,13 +9,13 @@ public class Patient {
 	private String password;
 	private Date dateNaissance;
 	private String telephone;
-	private String message;
-	public Patient(String nom, String prenom, String email,String password, Date dateNaissance, String telephone,
-			String message) {
+	private String typeConsoltation;
+	public Patient(String nom, String prenom, String email,String password ,Date dateNaissance, String telephone,
+			String typeConsoltation) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
-		this.password = password;
+		this.password=password;
 		this.dateNaissance = dateNaissance;
 		this.telephone = telephone;
 		this.message = message;

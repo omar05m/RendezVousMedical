@@ -1,5 +1,6 @@
 package eheio.ma.controller;
 
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,19 +9,27 @@ import java.util.UUID;
 
 import eheio.ma.dao.PatientDao;
 import eheio.ma.model.Patient;
+
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+
 
 public class RendezVous extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	public PatientDao patientDao = new PatientDao();
+    private static final long serialVersionUID = 1L;
+    public PatientDao patientDao = new PatientDao();
 
-	public RendezVous() {
-		// TODO Auto-generated constructor stub
-	}
+    public RendezVous() {
+        super();
+    }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -51,12 +60,6 @@ public class RendezVous extends HttpServlet {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-	}
-
-	public void setIdRendezVous(int int1) {
-	}
-
-	public void setIdRendezVous(int int1) {		
-	}
+	
 
 }
